@@ -1,5 +1,7 @@
 package com.example.nicestrat;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -9,12 +11,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +39,45 @@ public class MainActivity extends AppCompatActivity {
         swipeLayout.setOnRefreshListener(mOnRefreshListener);
 
 
+    }
+
+    public void showAlertDialogButtonClicked(MainActivity mainActivity) {
+
+
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
+
+
+        builder.setTitle("Dialogo");
+        builder.setMessage("¿Que quieres hacer?");
+        builder.setIcon(R.drawable.usericon);
+        builder.setCancelable(true);
+
+
+
+        builder.setPositiveButton("Scrolling", new DialogInterface.OnClickListener()  {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(MainActivity.this, Login.class);
+                startActivity(intent);
+            }
+        });
+
+        builder.setNegativeButton("Nada", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
+        builder.setNeutralButton("Otro", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                System.exit(0);
+            }
+        });
+
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     public void onCreateContextMenu(ContextMenu menu, View v,

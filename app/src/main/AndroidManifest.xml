@@ -13,10 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NiceStrat">
+
         <activity
             android:name=".Profile"
             android:exported="true"
             android:theme="@style/Theme.NiceStrat.ActionBarTITULO"/>
+
         <activity
             android:name=".Splash"
             android:exported="true">
