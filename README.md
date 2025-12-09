@@ -1,34 +1,91 @@
-## Descripción
 
-Aquí se encuentran el código de nuestro (Java), los recursos (layouts, drawables, valores),  
-Todo esto para dar acabo nuestra aplicacion`NiceStrat`.
+# NiceStrat
+
+Aplicación Android desarrollada en *Java* con *Android Studio* como parte de un proyecto académico.  
+El objetivo principal es practicar el flujo de autenticación de un usuario (login / registro) y la navegación entre pantallas.
+
+---
+
+## Capturas de Pantalla
+
+A continuación, se presentan algunas capturas de pantalla de como se verian las pantallas principales de la aplicación:
+
+### Registro
+Esta es nuestra pantalla de registro
+![Registrar](img/foto1.png)
+
+### Inicio de Sesión
+Esta es la pantalla en la cual realizamos el login a la aplicaion
+![Login](img/foto2.png)
+
+### Vista Principal
+Este seria el main de nuestra aplicacion
+![Main](img/foto3.png)
+
+### Pantalla de Carga
+Esta es la pantalla de carga de la aplicacion al inicializarla
+![Splash](img/foto4.png)
+
+## 📱 Funcionalidades
+
+- *Pantalla de inicio de sesión (Login)*
+    - Campos de usuario y contraseña.
+    - Botón para iniciar sesión.
+    - Acceso directo a la pantalla de registro.
+
+- *Pantalla de registro (Sign Up)*
+    - Campos de usuario, email, contraseña y repetición de contraseña.
+    - Botón para crear la cuenta.
+    - Botón de cancelar para volver a la pantalla de login.
+
+- *Pantalla principal*
+    - Vista sencilla con el texto de prueba *“Hello World!”*, que actúa como pantalla de inicio tras el login.
+
+---
+
+## 🛠 Tecnologías utilizadas
+
+- *Lenguaje:* Java
+- *Entorno de desarrollo:* Android Studio
+- *SDK:* Android SDK
+- *Sistema de construcción:* Gradle
+
+---
+
+## ✅ Requisitos del programa
+
+Para compilar y ejecutar el proyecto necesitas:
+
+- *JDK 11 o superior* (según la configuración del proyecto).
+- *Android Studio* (obligatorio).
+- Emulador de Android o dispositivo físico para ejecutar la app.
+
+---
+
+## 📂 Estructura del proyecto
+
+Las rutas pueden variar ligeramente según el paquete configurado en Android Studio, pero la estructura principal es:
+
+- app/src/main/java/
+    - Login.java – Lógica de la ventana de *inicio de sesión*.
+    - MainActivity.java – Lógica de la *pantalla principal* de la app.
+    - SingUp.java – Lógica de la ventana de *registro de nueva cuenta*.
+
+- app/src/main/res/layout/
+    - activity_login.xml – Diseño (frontend) de la pantalla de *login*.
+    - activity_main.xml – Diseño de la *vista principal*.
+    - activity_sing_up.xml – Diseño de la pantalla de *registro*.
+
+- app/src/main/AndroidManifest.xml – *Manifest* del módulo con la configuración de actividades y permisos.
+
+- img/
+    - foto1.png – Screenshot de la pantalla de *login*.
+    - foto2.png – Screenshot de la pantalla de *registro*.
+    - foto3.png – Screenshot de la *pantalla principal* (Hello World).
+
+---
+
+## 🚀 Cómo ejecutar el proyecto
 
 
-- `src/main/java/SingUp.java` - código fuente del backend de la ventana asociada al inicio de una cuenta nueva.
-![registrar.png](img/foto1.png)
-- `src/main/java/Login.java` - código fuente del backend de la ventana en la cual iniciamos sesion.
-![login.png](img/foto2.png)
-- `src/main/java/MainActivity.java` - Aqui tenemos el código fuente del backend de la foto que vemos a continuacion.
-![main.png](img/foto3.png)
 
-
-## Requisitos del programa 
-
-- JDK (11+ recomendado, según configuración del proyecto).
-- Android Studio (obligatorio).
-
-## Estructura 
-
-- `src/main/java/Login.java` - código fuente del backend de la ventana asociada al inicio de sesion.
-- `src/main/java/MainActivity.java` - código fuente del backend de la vista principal.
-- `src/main/java/SingUp.java` - código fuente del backend de la ventana asociada al registro de una cuenta nueva.
-- `src/main/res/layout/activity_login.xml` - Aqui se encuentra el codigo del frontent de la ventana asociada al inicio de sesion.
-- `src/main/res/layout/activity_main.xml` - Aqui se encuentra el codigo del frontent de la vista principal.
-- `src/main/res/layout/activity_sing_up.xml` - Aqui se encuentra el codigo del frontent de la ventana asociada al registro de una cuenta nueva.
-- `src/main/AndroidManifest.xml` - manifest del módulo.
-
-## Cómo contribuir
-
-1. Crea un branch con un nombre descriptivo (por ejemplo `feature/nombre` o `fix/descripcion`).
-2. Abre un Pull Request hacia la rama destino (ej. `develop` o `main`) con una descripción clara de los cambios.
-4. Incluye screenshots o pasos para reproducir si el cambio afecta la UI.
